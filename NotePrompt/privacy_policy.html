@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Note Prompt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0073fc;
+      --primary-light: rgba(0, 115, 252, 0.08);
+      --text: #1f2937;
+      --text-muted: #6b7280;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --border: #334155;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background-color: var(--primary);
+      border-radius: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 15px -3px rgba(0, 115, 252, 0.3);
+    }
+
+    .logo svg {
+      width: 32px;
+      height: 32px;
+      fill: #ffffff;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+      color: var(--text);
+      opacity: 0.9;
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 20px;
+      font-size: 0.95rem;
+      color: var(--text);
+      opacity: 0.9;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .permission-item {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .permission-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .permission-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="logo">
+        <!-- Minimal sticky note icon -->
+        <svg viewBox="0 0 24 24">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/>
+        </svg>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Effective Date: May 10, 2026</p>
+    </header>
+
+    <div class="card">
+      <h2>1. Introduction</h2>
+      <p>Welcome to <strong>Note Prompt</strong>. We are fully committed to protecting your privacy and providing a secure mobile experience. This Privacy Policy outlines our practices regarding data collection, storage, and usage when you use our mobile application.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. No Personal Data Collection</h2>
+      <p><strong>Note Prompt</strong> does not collect, store, or transmit any of your personal data or information to external servers. Your notes, checklists, task items, image attachments, and customizable color selections are stored <strong>strictly locally</strong> on your own device's internal storage.</p>
+      <p>We do not have access to your written notes, checklists, or saved images. Your notes belong entirely to you.</p>
+    </div>
+
+    <div class="card">
+      <h2>3. Device Permissions Declared</h2>
+      <p>To deliver advanced reminders and background sticky note alerts, Note Prompt requires access to certain system permissions. Below is an explanation of why each permission is required:</p>
+      
+      <div class="permission-item">
+        <div class="permission-name">⏰ Exact Alarm Permission (USE_EXACT_ALARM)</div>
+        <p>Used to schedule and trigger user-defined alarms at the exact specified hour. This ensures your note alerts appear precisely when you expect them.</p>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-name">🔔 Post Notifications Permission (POST_NOTIFICATIONS)</div>
+        <p>Used to render customizable note reminders in your device's drawer and trigger notifications when an alarm fires.</p>
+      </div>
+
+      <div class="permission-item">
+        <div class="permission-name">⚙️ Foreground Services (FOREGROUND_SERVICE / FOREGROUND_SERVICE_REMINDER)</div>
+        <p>Required to maintain persistent "Sticky Notifications" inside the notification tray, allowing users to interact, tick items off checklists, or tap "Done" easily without service interruption.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>4. Third-Party Services (AdMob Advertising)</h2>
+      <p>To keep the application free for our users, Note Prompt incorporates <strong>Google AdMob</strong> advertising services. Google AdMob may collect and process certain identifiers of your device. This data is handled in accordance with Google's Privacy Policies.</p>
+      <p>Data potentially processed by Google AdMob includes:</p>
+      <ul>
+        <li>IP address and geolocation (for basic region-level target matching).</li>
+        <li>Mobile Advertising Identifier (Google AD_ID on Android, IDFA on iOS).</li>
+        <li>App performance and crash logs.</li>
+      </ul>
+      <p>This data is used solely to prevent fraud, serve relevant advertisements, and deliver analytic usage stats. You can opt out of personalized ad tracking via your Android's Google Settings ➡️ Ads.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Image and Local File Storage</h2>
+      <p>When you attach images to your notes (NotePrompt Pro feature), the files are processed using your system's native Media Picker and duplicated into our app's secure private documents directory. These images are not uploaded, shared, or indexed by our servers.</p>
+    </div>
+
+    <div class="card">
+      <h2>6. Data Retention and Deletion</h2>
+      <p>Since all your notes are stored locally on your device, you have complete ownership and control over your data. All notes, checklists, images, and preferences are automatically and permanently deleted from your system immediately upon uninstalling the application.</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Children's Privacy</h2>
+      <p>Our app does not knowingly collect or solicit any personal information from children under the age of 13. If you believe your child has shared information, please contact us so we can verify and delete any local caching.</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Changes to This Privacy Policy</h2>
+      <p>We may update our Privacy Policy from time to time. Any changes will be updated directly in this document. We advise you to review this page periodically for any modifications.</p>
+    </div>
+
+    <div class="card">
+      <h2>9. Contact Us</h2>
+      <p>If you have any questions, suggestions, or concerns regarding your privacy or our practices, please reach out to us at:</p>
+      <p>✉️ Support Email: <a href="mailto:smtechnologies.dev@gmail.com" style="color: var(--primary); text-decoration: none;">smtechnologies.dev@gmail.com</a></p>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Note Prompt. All rights reserved.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
