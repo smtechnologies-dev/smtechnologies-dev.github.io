@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM Technologies | Building Smart Mobile & AI Solutions</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SM Technologies is a leading solo developer-led software studio specializing in high-performance React Native mobile apps, intelligent AI tools, and seamless automation services.">
+    <meta name="keywords" content="SM Technologies, Shahid, React Native developer, Mobile Apps, AI development, Automation tools, App publishing, Android development, iOS apps, NotePrompt, Ampere Pulse">
+    <meta name="author" content="SM Technologies">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smtechnologies.com/">
+    <meta property="og:title" content="SM Technologies | Building Smart Mobile & AI Solutions">
+    <meta property="og:description" content="High-performance React Native mobile apps and intelligent AI tools crafted with precision.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="SM Technologies | Building Smart Mobile & AI Solutions">
+    <meta property="twitter:description" content="High-performance React Native mobile apps and intelligent AI tools crafted with precision.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&h=630&q=80">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#070A13',
+                        slateDark: '#0E1322',
+                        slateCard: '#151C2F',
+                        indigoNeon: '#6366F1',
+                        purpleNeon: '#A855F7',
+                        cyanGlow: '#06B6D4',
+                        borderLight: 'rgba(255, 255, 255, 0.08)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-indigo': '0 0 20px rgba(99, 102, 241, 0.25)',
+                        'neon-purple': '0 0 20px rgba(168, 85, 247, 0.25)',
+                        'neon-cyan': '0 0 20px rgba(6, 182, 212, 0.25)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Styles -->
+    <style>
+        /* Premium Background Grid Pattern */
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        /* Fluid Gradient Text */
+        .gradient-text-indigo {
+            background: linear-gradient(135deg, #6366F1 0%, #A855F7 50%, #EC4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-text-cyan {
+            background: linear-gradient(135deg, #3B82F6 0%, #06B6D4 50%, #10B981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Styling */
+        .glass-panel {
+            background: rgba(21, 28, 47, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-panel-hover:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            background: rgba(21, 28, 47, 0.8);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070A13;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1D263B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6366F1;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-gray-200 font-sans min-h-screen relative overflow-x-hidden antialiased">
+
+    <!-- Glowing Background Orbs -->
+    <div class="absolute top-[10%] left-[-10%] w-[500px] h-[500px] bg-indigoNeon rounded-full filter blur-[120px] opacity-[0.08] pointer-events-none"></div>
+    <div class="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-purpleNeon rounded-full filter blur-[150px] opacity-[0.07] pointer-events-none"></div>
+    <div class="absolute bottom-[10%] left-[20%] w-[600px] h-[600px] bg-cyanGlow rounded-full filter blur-[140px] opacity-[0.06] pointer-events-none"></div>
+
+    <!-- Background Grid overlay -->
+    <div class="absolute inset-0 bg-grid opacity-60 pointer-events-none"></div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-transparent" id="main-header">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigoNeon rounded-lg p-1">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigoNeon to-purpleNeon flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300">
+                    <span class="font-display font-black text-xl text-white">SM</span>
+                </div>
+                <span class="font-display font-extrabold text-xl tracking-tight text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-indigo-300 transition-all duration-300">
+                    SM Technologies
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium hover:text-white transition-colors duration-200 relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigoNeon after:transition-all after:duration-300 hover:after:w-full">Home</a>
+                <a href="#about" class="text-sm font-medium hover:text-white transition-colors duration-200 relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigoNeon after:transition-all after:duration-300 hover:after:w-full">About</a>
+                <a href="#services" class="text-sm font-medium hover:text-white transition-colors duration-200 relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigoNeon after:transition-all after:duration-300 hover:after:w-full">Services</a>
+                <a href="#apps" class="text-sm font-medium hover:text-white transition-colors duration-200 relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigoNeon after:transition-all after:duration-300 hover:after:w-full">Apps</a>
+                <a href="#contact" class="text-sm font-medium hover:text-white transition-colors duration-200 relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigoNeon after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-slateDark border border-borderLight hover:border-indigoNeon/50 hover:shadow-neon-indigo/20 hover:shadow-md text-sm font-semibold transition-all duration-300">
+                    Let's Build <i data-lucide="arrow-right" class="inline w-4 h-4 ml-1"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-slateCard/50 transition-colors focus:outline-none" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Navigation Overlay -->
+        <div class="fixed inset-0 bg-obsidian/80 backdrop-blur-md z-40 md:hidden transition-all duration-300 ease-in-out opacity-0 pointer-events-none" id="mobile-drawer-overlay"></div>
+        <div class="fixed top-0 right-0 w-80 h-full bg-slateDark z-50 md:hidden transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col p-8 border-l border-borderLight" id="mobile-drawer">
+            <div class="flex items-center justify-between mb-10">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigoNeon to-purpleNeon flex items-center justify-center">
+                        <span class="font-display font-black text-sm text-white">SM</span>
+                    </div>
+                    <span class="font-display font-extrabold text-lg text-white">SM Tech</span>
+                </div>
+                <button class="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-slateCard transition-colors" id="mobile-drawer-close" aria-label="Close menu">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-6 text-lg font-medium">
+                <a href="#home" class="flex items-center gap-3 py-2 text-gray-300 hover:text-white transition-colors" onclick="closeMobileDrawer()"><i data-lucide="home" class="w-5 h-5 text-indigoNeon"></i> Home</a>
+                <a href="#about" class="flex items-center gap-3 py-2 text-gray-300 hover:text-white transition-colors" onclick="closeMobileDrawer()"><i data-lucide="user" class="w-5 h-5 text-indigoNeon"></i> About</a>
+                <a href="#services" class="flex items-center gap-3 py-2 text-gray-300 hover:text-white transition-colors" onclick="closeMobileDrawer()"><i data-lucide="cpu" class="w-5 h-5 text-indigoNeon"></i> Services</a>
+                <a href="#apps" class="flex items-center gap-3 py-2 text-gray-300 hover:text-white transition-colors" onclick="closeMobileDrawer()"><i data-lucide="smartphone" class="w-5 h-5 text-indigoNeon"></i> Apps</a>
+                <a href="#contact" class="flex items-center gap-3 py-2 text-gray-300 hover:text-white transition-colors" onclick="closeMobileDrawer()"><i data-lucide="mail" class="w-5 h-5 text-indigoNeon"></i> Contact</a>
+            </nav>
+
+            <div class="mt-auto border-t border-borderLight pt-8 flex flex-col gap-4">
+                <a href="mailto:info@smtechnologies.com" class="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4"></i> info@smtechnologies.com
+                </a>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-lg bg-slateCard flex items-center justify-center text-gray-400 hover:text-white transition-colors hover:border hover:border-indigoNeon/30"><i data-lucide="github" class="w-5 h-5"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-lg bg-slateCard flex items-center justify-center text-gray-400 hover:text-white transition-colors hover:border hover:border-indigoNeon/30"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="relative max-w-7xl mx-auto px-6 pt-16 md:pt-28 pb-20 flex flex-col items-center text-center">
+            <!-- Tech Stack Floating Badges -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigoNeon/10 text-indigoNeon border border-indigoNeon/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-indigoNeon animate-pulse"></span> React Native Expert
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-purpleNeon/10 text-purpleNeon border border-purpleNeon/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purpleNeon animate-pulse"></span> AI & LLM Integrations
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-cyanGlow/10 text-cyanGlow border border-cyanGlow/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyanGlow animate-pulse"></span> Automation & Scripting
+                </span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl tracking-tight text-white max-w-5xl leading-tight sm:leading-none mb-6">
+                Engineering <span class="gradient-text-indigo">Next-Gen Mobile Apps</span> & Intelligent <span class="gradient-text-cyan">AI Solutions</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed mb-10">
+                Building Smart Mobile & AI Solutions. Delivering high-performance, responsive cross-platform apps coupled with powerful background automations and neural network integrations.
+            </p>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 mb-20 w-full justify-center">
+                <a href="#apps" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-indigoNeon to-purpleNeon hover:scale-105 transition-transform duration-300 font-bold text-white shadow-lg shadow-indigo-500/30 flex items-center justify-center gap-2">
+                    <i data-lucide="layout-grid" class="w-5 h-5"></i> Explore Portfolio
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slateDark border border-borderLight hover:border-indigoNeon/40 hover:bg-slateCard/80 transition-colors duration-300 font-bold text-white flex items-center justify-center gap-2">
+                    <i data-lucide="message-square" class="w-5 h-5"></i> Get In Touch
+                </a>
+            </div>
+
+            <!-- Features Visual Grid -->
+            <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-borderLight">
+                <div class="flex flex-col items-center p-4">
+                    <div class="w-12 h-12 rounded-xl bg-slateDark border border-borderLight flex items-center justify-center text-indigoNeon mb-3">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-display font-bold text-white text-lg">Ultra Fast</span>
+                    <span class="text-xs text-gray-400 mt-1">Highly-optimized Native code</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="w-12 h-12 rounded-xl bg-slateDark border border-borderLight flex items-center justify-center text-purpleNeon mb-3">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-display font-bold text-white text-lg">Secure By Design</span>
+                    <span class="text-xs text-gray-400 mt-1">State-of-the-art encryption</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="w-12 h-12 rounded-xl bg-slateDark border border-borderLight flex items-center justify-center text-cyanGlow mb-3">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-display font-bold text-white text-lg">Adaptive UI</span>
+                    <span class="text-xs text-gray-400 mt-1">Beautiful responsive layouts</span>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="w-12 h-12 rounded-xl bg-slateDark border border-borderLight flex items-center justify-center text-indigo-400 mb-3">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-display font-bold text-white text-lg">AI Integrated</span>
+                    <span class="text-xs text-gray-400 mt-1">Smarter context automation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-slateDark/50 border-y border-borderLight">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <!-- Text Info Column -->
+                    <div class="lg:col-span-7">
+                        <span class="text-xs font-bold tracking-widest text-indigoNeon uppercase mb-3 block">Who We Are</span>
+                        <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mb-6 leading-tight">
+                            A Solo-Developer Powerhouse Engineering Premium Software
+                        </h2>
+                        <div class="space-y-4 text-gray-400 text-base sm:text-lg leading-relaxed">
+                            <p>
+                                At <strong class="text-white">SM Technologies</strong>, we cut out the administrative overhead of large agencies to deliver software with exceptional speed, agility, and precision. Founded and led by a dedicated software innovator, we build modern digital products.
+                            </p>
+                            <p>
+                                We specialize in turning complex technological concepts into elegant, intuitive mobile applications using <strong class="text-white">React Native</strong>. Whether it's crafting lightning-fast responsive utility tools or embedding custom <strong class="text-white">Artificial Intelligence</strong> models and smart workflows, we maintain production-ready standards at every tier.
+                            </p>
+                        </div>
+
+                        <!-- Core Strengths Mini-Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+                            <div class="flex items-start gap-4">
+                                <div class="p-2.5 rounded-lg bg-indigoNeon/10 text-indigoNeon mt-1">
+                                    <i data-lucide="check" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-base">Direct & Agile Pipeline</h4>
+                                    <p class="text-sm text-gray-400 mt-1">Work directly with the engineer translating business logic to production code rapidly.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="p-2.5 rounded-lg bg-purpleNeon/10 text-purpleNeon mt-1">
+                                    <i data-lucide="check" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-base">Performance Engineered</h4>
+                                    <p class="text-sm text-gray-400 mt-1">Optimized builds utilizing target device benchmarks and clean system architectures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Column -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm aspect-square">
+                            <!-- Background glow decoration -->
+                            <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-indigoNeon to-purpleNeon opacity-30 blur-lg animate-pulse"></div>
+                            
+                            <!-- Interactive Graphic Panel -->
+                            <div class="relative w-full h-full glass-panel rounded-2xl p-8 flex flex-col justify-between shadow-2xl border border-white/10">
+                                <div class="flex justify-between items-start">
+                                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigoNeon to-purpleNeon flex items-center justify-center text-white"><i data-lucide="code-2" class="w-6 h-6"></i></div>
+                                    <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Active
+                                    </span>
+                                </div>
+                                
+                                <div class="my-6">
+                                    <div class="text-sm text-gray-400 mb-1 font-mono">Current Build Status</div>
+                                    <div class="font-display font-extrabold text-2xl text-white">React Native 0.76+</div>
+                                    <div class="w-full bg-slateDark rounded-full h-1.5 mt-3 overflow-hidden">
+                                        <div class="bg-gradient-to-r from-indigoNeon to-cyanGlow h-full rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2 border-t border-borderLight pt-4">
+                                    <div class="flex justify-between text-xs font-mono text-gray-400">
+                                        <span>Target SDK Support</span>
+                                        <span class="text-white">Android 14 (API 34)</span>
+                                    </div>
+                                    <div class="flex justify-between text-xs font-mono text-gray-400">
+                                        <span>Cross-Platform Core</span>
+                                        <span class="text-white">Expo SDK 52 / iOS 17</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold tracking-widest text-indigoNeon uppercase mb-3 block">What We Offer</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mb-4">
+                    Our Core Capabilities
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Transforming your technical visions into highly optimized, production-ready applications with modern aesthetics.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service Card 1 -->
+                <div class="glass-panel glass-panel-hover rounded-2xl p-8 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigoNeon/10 text-indigoNeon flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-indigoNeon/20 transition-all duration-300">
+                            <i data-lucide="smartphone" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Mobile App Development</h3>
+                        <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                            Building production-ready cross-platform mobile apps for iOS and Android using React Native and Expo. We deliver butter-smooth layouts, offline-first architectures, native sensor integration, and modern navigation workflows tailored for end-users.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-borderLight flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">React Native</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">Expo SDK</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">Fast Refresh</span>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="glass-panel glass-panel-hover rounded-2xl p-8 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-purpleNeon/10 text-purpleNeon flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-purpleNeon/20 transition-all duration-300">
+                            <i data-lucide="brain" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">AI & Automation Tools</h3>
+                        <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                            Injecting intelligence into digital applications. From incorporating OpenAI, Claude, and Gemini API backends directly to designing advanced headless scraper scripts, custom LLM prompt engineering matrices, and automated background workers that streamline execution.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-borderLight flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">OpenAI API</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">Custom Workflows</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">Data Extractors</span>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="glass-panel glass-panel-hover rounded-2xl p-8 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-cyanGlow/10 text-cyanGlow flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cyanGlow/20 transition-all duration-300">
+                            <i data-lucide="server" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">API Integration & Backends</h3>
+                        <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                            Crafting lightweight and resilient server backends, database layouts, and API integrations. We specialize in configuring lightning-fast services using Node.js, Python, Firebase, SQLite, or PostgreSQL, complete with clean JWT authentication and custom route logic.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-borderLight flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">Node.js / Express</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">Python / FastAPI</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">JWT Security</span>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="glass-panel glass-panel-hover rounded-2xl p-8 transition-all duration-300 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-400/10 text-indigo-400 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-indigo-400/20 transition-all duration-300">
+                            <i data-lucide="send" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Play Store Publishing Support</h3>
+                        <p class="text-gray-400 leading-relaxed text-sm sm:text-base">
+                            Navigating Google Play Store and iOS App Store compliance smoothly. We assist in configuring Android App Bundles (AAB), signing production builds, updating legacy target SDK versions, drafting accurate privacy policies, and streamlining console verification tasks.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-borderLight flex flex-wrap gap-2">
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">Play Console</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">App Bundles</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slateDark border border-borderLight text-gray-300">Compliance Audit</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apps Portfolio Section (Featuring Real Portfolio Projects!) -->
+        <section id="apps" class="py-24 bg-slateDark/50 border-y border-borderLight">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="text-xs font-bold tracking-widest text-indigoNeon uppercase mb-3 block">Portfolio</span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mb-4">
+                        Featured Applications
+                    </h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        A closer look at some signature production applications built, optimized, and engineered by SM Technologies.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- NotePrompt -->
+                    <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-white/5 hover:border-indigoNeon/20 transition-all duration-300 group">
+                        <div class="p-8 pb-4 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigoNeon to-cyanGlow flex items-center justify-center text-white text-xl font-black font-display shadow-lg shadow-indigo-500/20">
+                                    <i data-lucide="bell" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-xl text-white">NotePrompt</h3>
+                                    <span class="text-xs text-indigoNeon font-semibold">Utility & Productivity</span>
+                                </div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-indigoNeon/10 text-indigoNeon font-bold border border-indigoNeon/20">iOS & Android</span>
+                        </div>
+                        <div class="px-8 py-2 flex-grow">
+                            <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                                Transform thoughts, tasks, or temporary text inputs directly into persistent or scheduled system push notifications. NotePrompt allows rapid micro-capturing and ensures key items are pinned to your native notification bar where you'll actually see them.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">React Native</span>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Expo Notifications</span>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">SQLite Storage</span>
+                            </div>
+                        </div>
+                        <div class="p-8 pt-4">
+                            <button class="w-full py-3 px-4 rounded-xl bg-slateDark border border-borderLight text-sm font-semibold hover:border-indigoNeon/40 hover:text-indigoNeon transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                                <i data-lucide="play" class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"></i> Coming Soon on Play Store
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Ampere Pulse -->
+                    <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-white/5 hover:border-purpleNeon/20 transition-all duration-300 group">
+                        <div class="p-8 pb-4 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purpleNeon to-pink-500 flex items-center justify-center text-white text-xl font-black font-display shadow-lg shadow-purple-500/20">
+                                    <i data-lucide="zap" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-xl text-white">Ampere Pulse</h3>
+                                    <span class="text-xs text-purpleNeon font-semibold">Diagnostics & Hardware</span>
+                                </div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-purpleNeon/10 text-purpleNeon font-bold border border-purpleNeon/20">Android Only</span>
+                        </div>
+                        <div class="px-8 py-2 flex-grow">
+                            <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                                A highly precise battery diagnostic center displaying charging/discharging speed in milliamperes (mA), hardware sensor statistics, battery temperature logs, voltage rates, and customized health analytics powered by a custom native thread bridge.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">React Native Custom Bridge</span>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Android SDK Kotlin</span>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Realtime Threading</span>
+                            </div>
+                        </div>
+                        <div class="p-8 pt-4">
+                            <button class="w-full py-3 px-4 rounded-xl bg-slateDark border border-borderLight text-sm font-semibold hover:border-purpleNeon/40 hover:text-purpleNeon transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                                <i data-lucide="play" class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"></i> Coming Soon on Play Store
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- GuardianEye -->
+                    <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-white/5 hover:border-cyanGlow/20 transition-all duration-300 group">
+                        <div class="p-8 pb-4 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyanGlow to-indigoNeon flex items-center justify-center text-white text-xl font-black font-display shadow-lg shadow-cyan-500/20">
+                                    <i data-lucide="eye" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-xl text-white">GuardianEye</h3>
+                                    <span class="text-xs text-cyanGlow font-semibold">Privacy & Security</span>
+                                </div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-cyanGlow/10 text-cyanGlow font-bold border border-cyanGlow/20">Android Only</span>
+                        </div>
+                        <div class="px-8 py-2 flex-grow">
+                            <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                                Detect hidden cameras and spy equipment using your smartphone's built-in magnetometer. GuardianEye monitors magnetic field variations in real-time, alerts of electrical anomalies, and incorporates custom software routines for reliable hardware sensor calibration.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Native Magnetometer Access</span>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Sensor Calibration</span>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Reactive Graphics</span>
+                            </div>
+                        </div>
+                        <div class="p-8 pt-4">
+                            <button class="w-full py-3 px-4 rounded-xl bg-slateDark border border-borderLight text-sm font-semibold hover:border-cyanGlow/40 hover:text-cyanGlow transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                                <i data-lucide="play" class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"></i> Coming Soon on Play Store
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Alarme -->
+                    <div class="glass-panel rounded-2xl overflow-hidden flex flex-col border border-white/5 hover:border-rose-500/20 transition-all duration-300 group">
+                        <div class="p-8 pb-4 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-orange-500 flex items-center justify-center text-white text-xl font-black font-display shadow-lg shadow-rose-500/20">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-xl text-white">Alarme</h3>
+                                    <span class="text-xs text-rose-500 font-semibold">Location & Lifestyle</span>
+                                </div>
+                            </div>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-500 font-bold border border-rose-500/20">iOS & Android</span>
+                        </div>
+                        <div class="px-8 py-2 flex-grow">
+                            <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                                Never miss your stop or forget a chore at a local store. Alarme triggers persistent location-aware alarms that ring exactly when you enter or exit specific coordinates or radial geofences, fully optimized for low-impact background GPS consumption.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Background Location Geofencing</span>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Google Maps API</span>
+                                <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-slateDark text-gray-400">Low-Battery GPS Mode</span>
+                            </div>
+                        </div>
+                        <div class="p-8 pt-4">
+                            <button class="w-full py-3 px-4 rounded-xl bg-slateDark border border-borderLight text-sm font-semibold hover:border-rose-500/40 hover:text-rose-500 transition-all duration-200 flex items-center justify-center gap-2 group/btn">
+                                <i data-lucide="play" class="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform"></i> Coming Soon on Play Store
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Info Column -->
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold tracking-widest text-indigoNeon uppercase mb-3 block">Get in Touch</span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white mb-6">
+                        Let's Discuss Your Next Innovation
+                    </h2>
+                    <p class="text-gray-400 text-base sm:text-lg leading-relaxed mb-10">
+                        Have a design, app concept, automation system, or build publishing issue? Drop a line and let's structure an elegant, fast, and optimized solution.
+                    </p>
+
+                    <!-- Contact Details Cards -->
+                    <div class="space-y-4">
+                        <a href="mailto:info@smtechnologies.com" class="glass-panel p-4 rounded-xl flex items-center gap-4 hover:border-indigoNeon/30 hover:bg-slateCard/40 transition-colors duration-200">
+                            <div class="w-12 h-12 rounded-lg bg-indigoNeon/10 text-indigoNeon flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5"></i></div>
+                            <div>
+                                <div class="text-xs text-gray-400">Email Address</div>
+                                <div class="text-white font-bold font-mono">info@smtechnologies.com</div>
+                            </div>
+                        </a>
+                        <div class="glass-panel p-4 rounded-xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-purpleNeon/10 text-purpleNeon flex items-center justify-center"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                            <div>
+                                <div class="text-xs text-gray-400">Based In</div>
+                                <div class="text-white font-bold">Remote Worldwide</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 pt-4">
+                            <a href="#" class="w-12 h-12 rounded-xl bg-slateDark border border-borderLight text-gray-400 hover:text-white hover:border-indigoNeon/40 flex items-center justify-center transition-all" aria-label="GitHub profile">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-xl bg-slateDark border border-borderLight text-gray-400 hover:text-white hover:border-purpleNeon/40 flex items-center justify-center transition-all" aria-label="Twitter account">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <form class="glass-panel rounded-2xl p-8 sm:p-10 space-y-6" id="contact-form">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3.5 rounded-xl bg-slateDark border border-borderLight text-white placeholder-gray-500 focus:outline-none focus:border-indigoNeon focus:ring-1 focus:ring-indigoNeon/30 transition-all font-medium" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Email Address</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3.5 rounded-xl bg-slateDark border border-borderLight text-white placeholder-gray-500 focus:outline-none focus:border-indigoNeon focus:ring-1 focus:ring-indigoNeon/30 transition-all font-medium" placeholder="you@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Subject</label>
+                            <input type="text" id="subject" required class="w-full px-4 py-3.5 rounded-xl bg-slateDark border border-borderLight text-white placeholder-gray-500 focus:outline-none focus:border-indigoNeon focus:ring-1 focus:ring-indigoNeon/30 transition-all font-medium" placeholder="Mobile app development / API custom support...">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Message</label>
+                            <textarea id="message" rows="5" required class="w-full px-4 py-3.5 rounded-xl bg-slateDark border border-borderLight text-white placeholder-gray-500 focus:outline-none focus:border-indigoNeon focus:ring-1 focus:ring-indigoNeon/30 transition-all font-medium resize-none" placeholder="Tell us more about your app concept, specifications, and milestones..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-indigoNeon to-purpleNeon hover:scale-[1.02] transition-transform duration-300 text-white font-bold flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/20 group">
+                            <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-borderLight bg-slateDark/60 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigoNeon to-purpleNeon flex items-center justify-center text-white font-bold font-display">
+                    SM
+                </div>
+                <span class="font-display font-extrabold text-white text-base">SM Technologies</span>
+            </div>
+            
+            <p class="text-sm text-gray-500 text-center md:text-left">
+                &copy; <span id="current-year"></span> SM Technologies. All rights reserved.
+            </p>
+
+            <div class="flex gap-6 text-sm text-gray-500">
+                <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Toast Toast-Message Element -->
+    <div id="toast-success" class="fixed bottom-6 right-6 z-50 glass-panel border-emerald-500/30 shadow-neon-cyan/20 shadow-lg rounded-2xl p-5 flex items-start gap-4 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 max-w-md">
+        <div class="p-2 bg-emerald-500/15 text-emerald-400 rounded-lg">
+            <i data-lucide="check" class="w-5 h-5"></i>
+        </div>
+        <div class="flex-grow">
+            <h4 class="font-display font-bold text-white text-base">Message Sent!</h4>
+            <p class="text-sm text-gray-400 mt-1">Thank you for contacting SM Technologies. We will review your prompt and respond within 24 hours.</p>
+        </div>
+        <button onclick="dismissToast()" class="p-1 text-gray-500 hover:text-white transition-colors">
+            <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+    </div>
+
+    <!-- Scripting for UI Interactions and Dynamics -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Dynamically set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Responsive Scroll Header Styling
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('bg-obsidian/75', 'backdrop-blur-md', 'border-borderLight');
+                header.classList.remove('border-transparent');
+            } else {
+                header.classList.remove('bg-obsidian/75', 'backdrop-blur-md', 'border-borderLight');
+                header.classList.add('border-transparent');
+            }
+        });
+
+        // Mobile Menu Drawer Control
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const drawerCloseBtn = document.getElementById('mobile-drawer-close');
+        const drawerOverlay = document.getElementById('mobile-drawer-overlay');
+        const drawer = document.getElementById('mobile-drawer');
+
+        function openMobileDrawer() {
+            drawerOverlay.classList.remove('opacity-0', 'pointer-events-none');
+            drawer.classList.remove('translate-x-full');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMobileDrawer() {
+            drawerOverlay.classList.add('opacity-0', 'pointer-events-none');
+            drawer.classList.add('translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', openMobileDrawer);
+        drawerCloseBtn.addEventListener('click', closeMobileDrawer);
+        drawerOverlay.addEventListener('click', closeMobileDrawer);
+
+        // Success Form Toast Handling
+        const contactForm = document.getElementById('contact-form');
+        const successToast = document.getElementById('toast-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show toast message
+            successToast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            successToast.classList.add('translate-y-0', 'opacity-100');
+            
+            // Reset fields
+            contactForm.reset();
+
+            // Auto dismiss toast after 6 seconds
+            setTimeout(() => {
+                dismissToast();
+            }, 6000);
+        });
+
+        function dismissToast() {
+            successToast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            successToast.classList.remove('translate-y-0', 'opacity-100');
+        }
+    </script>
+</body>
+</html>
