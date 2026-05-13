@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - QR Code Scanner & QR Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #0B0B0E;
+            --surface: #16161C;
+            --surface-secondary: #21212B;
+            --border: #2A2A38;
+            --text: #FFFFFF;
+            --text-muted: #8E8E9F;
+            --accent: #FF6B00;
+            --accent-glow: rgba(255, 107, 0, 0.15);
+            --success: #10B981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--surface);
+            border: 1.5px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+        }
+
+        .logo-box {
+            display: inline-flex;
+            width: 64px;
+            height: 64px;
+            background-color: var(--accent-glow);
+            border-radius: 16px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            border: 1px solid var(--accent);
+        }
+
+        .logo-icon {
+            font-size: 32px;
+            color: var(--accent);
+            font-weight: 900;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        p strong {
+            color: var(--text);
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        li {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #ff8533;
+            text-decoration: underline;
+        }
+
+        .card {
+            background-color: var(--surface-secondary);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 24px 0;
+            border-left: 4px solid var(--accent);
+        }
+
+        .card p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            body {
+                padding: 16px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-box">
+                <span class="logo-icon">QR</span>
+            </div>
+            <h1>QR Code Scanner & QR Generator</h1>
+            <div class="last-updated">Privacy Policy — Last Updated: May 8, 2026</div>
+        </header>
+
+        <h2>1. Introduction</h2>
+        <p><strong>QR Code Scanner & QR Generator</strong> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains what information our app accesses, why it is needed, and how it is handled. By using our App, you agree to the terms described here.</p>
+
+        <h2>2. Information We Access (But Do Not Store)</h2>
+        <p>Our application operates under a strict <strong>local-first architecture</strong>. Your scanned records and generated QR cards belong solely to you, processing entirely within your local device space:</p>
+        
+        <ul>
+            <li><strong>Camera Access:</strong> The App requires camera permission to scan and decode live QR codes and barcodes in real time. The camera feed is analyzed dynamically on your device; no photos, frame buffers, or video feeds are ever captured, saved to disk, or transmitted over the network.</li>
+            <li><strong>Photo Gallery Access (Read):</strong> The gallery reading feature allows you to select an image from your photo library to decode pre-existing QR codes. Selected images are analyzed locally and are never uploaded to any remote server.</li>
+            <li><strong>Photo Gallery Access (Write):</strong> To download and save your custom-designed QR cards directly to your device's photo album, the App requires permission to save photos to your library.</li>
+            <li><strong>Scanned & Generated Logs:</strong> All of your scanned links, codes, and created cards are stored locally in secure AsyncStorage on your physical device. This data is private, is never synced to external servers, and is permanently deleted if you uninstall the App or clear your logs from the Settings tab.</li>
+        </ul>
+
+        <div class="card">
+            <p><strong>Security Note:</strong> Because all operations take place strictly on your physical device, your data is inherently secure. A data breach of your scanned history from our end is mathematically impossible because we run no external servers or databases.</p>
+        </div>
+
+        <h2>3. Advertising (Google AdMob)</h2>
+        <p>The App uses Google AdMob to display banner and interstitial advertisements to support ongoing development. Google AdMob may collect and process device identifiers (such as Android Advertising ID or iOS IDFA) to serve relevant, personalized, or non-personalized advertisements. This processing is managed entirely by Google's SDK and is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</p>
+        <p>You can opt out of personalized advertisements on your mobile device at any time by configuring your device operating system settings (Settings → Google → Ads → Opt out of Ads Personalization).</p>
+
+        <h2>4. Pro Mode (Ad-Free Experience)</h2>
+        <p>We offer an optional in-app <strong>Pro Mode</strong> upgrade. Once Pro Mode is activated, the entire Google AdMob SDK is deactivated, and all advertisement components are completely disabled. No ad-related tracking, device identification, or data requests will take place once Pro Mode is active.</p>
+
+        <h2>5. Data Security</h2>
+        <p>We implement secure, local-first coding practices to secure your local logs. Since your database remains entirely within your private device environment, you have complete control over your records. You can wipe your database instantly by using the "Clear All History" feature in your App's Settings menu.</p>
+
+        <h2>6. Children's Privacy</h2>
+        <p>Our App is not directed at children under 13 years of age. We do not knowingly collect, request, or store any personal information from children.</p>
+
+        <h2>7. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect operational or security improvements. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or local data storage practices, please contact us at:</p>
+        <p style="text-align: center; margin-top: 10px; margin-bottom: 24px;">
+            <a href="mailto:smtechnologies.dev@gmail.com" style="font-size: 18px; font-weight: 800; background-color: var(--surface-secondary); padding: 12px 24px; border-radius: 12px; border: 1.5px solid var(--border); display: inline-block;">
+               smtechnologies.dev@gmail.com
+            </a>
+        </p>
+
+        <footer>
+            <p style="text-align: center; font-size: 12px; color: var(--text-muted);">
+                © 2026 QR Code Scanner & QR Generator. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
