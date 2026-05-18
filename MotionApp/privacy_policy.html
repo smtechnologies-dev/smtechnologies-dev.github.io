@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MotionAlign Cues</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #0A1628;
+            --surface: #0F172A;
+            --surface-secondary: #1E293B;
+            --border: #334155;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --accent: #38BDF8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --success: #10B981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+        }
+
+        .logo-box {
+            display: inline-flex;
+            width: 64px;
+            height: 64px;
+            background-color: var(--accent-glow);
+            border-radius: 16px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            border: 1px solid var(--accent);
+        }
+
+        .logo-icon {
+            font-size: 32px;
+            color: var(--accent);
+            font-weight: 900;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .date {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 32px 0 16px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--accent);
+            border-radius: 4px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 24px;
+        }
+
+        li {
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 15px;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        strong {
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background-color: var(--surface-secondary);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--text);
+        }
+
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 32px 24px;
+            }
+            h1 { font-size: 28px; }
+            h2 { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-box">
+                <span class="logo-icon">🚗</span>
+            </div>
+            <h1>MotionAlign Cues</h1>
+            <div class="date">Last updated: May 18, 2026</div>
+        </header>
+
+        <p><strong>MotionAlign Cues</strong> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains what information our app accesses, why it is needed, and how it is handled. By using our App, you agree to the terms described here.</p>
+
+        <h2>1. Information We Access (But Do Not Store)</h2>
+        <p>Our application operates under a strict local-first architecture to provide real-time visual cues. Your sensor data belongs solely to you and processes entirely within your local device space:</p>
+        <ul>
+            <li><strong>Accelerometer / Physical Activity:</strong> The App requires access to your device's raw accelerometer sensors to detect vehicle motion (acceleration, braking, and turning) in real-time. This physics calculation happens exclusively on your device. No sensor data is ever captured, saved to disk, or transmitted over the network.</li>
+            <li><strong>Display Over Other Apps (System Alert Window):</strong> To draw the animated motion dots over your other active applications without interrupting your workflow.</li>
+            <li><strong>Foreground Service:</strong> To keep the physics engine running seamlessly in the background while you read or watch videos.</li>
+            <li><strong>Notifications:</strong> To display an ongoing persistent notification, ensuring you have full control to instantly stop the background service at any time.</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>Security Note:</strong> Because all operations take place strictly on your physical device, your data is inherently secure. A data breach of your physical location or movement history from our end is mathematically impossible because we run no external servers or databases.</p>
+        </div>
+
+        <h2>2. Advertising (Google AdMob)</h2>
+        <p>The App uses Google AdMob to display advertisements to support ongoing development. Google AdMob may collect and process device identifiers (such as Android Advertising ID or iOS IDFA) to serve relevant, personalized, or non-personalized advertisements. This processing is managed entirely by Google's SDK and is subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+        <p>You can opt out of personalized advertisements on your mobile device at any time by configuring your device operating system settings (Settings → Google → Ads → Opt out of Ads Personalization).</p>
+
+        <h2>3. Data Security</h2>
+        <p>We implement secure, local-first coding practices. Since your motion calculations remain entirely within your private device environment, you have complete privacy. We do not transmit your personal or sensor data over the internet.</p>
+
+        <h2>4. Children's Privacy</h2>
+        <p>Our App is not directed at children under 13 years of age. We do not knowingly collect, request, or store any personal information from children.</p>
+
+        <h2>5. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect operational or security improvements. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or local data storage practices, please contact us at:</p>
+        <p><a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a></p>
+        
+        <footer>
+            © 2026 MotionAlign Cues. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
