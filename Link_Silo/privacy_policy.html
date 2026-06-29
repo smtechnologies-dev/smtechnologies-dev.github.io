@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - LinkSilo</title>
+    <style>
+        :root {
+            --bg-color: #0c101d;
+            --card-bg: #141a2e;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --primary-color: #3b82f6;
+            --primary-light: #60a5fa;
+            --border-color: #1e293b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-top: 0;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: var(--primary-light);
+            font-size: 1.15rem;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        p, li {
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        .badge {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary-light);
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="badge">Privacy First</div>
+            <h1>LinkSilo Privacy Policy</h1>
+            <p>Last updated: June 30, 2026</p>
+        </div>
+
+        <div class="card">
+            <h2>1. Overview & Offline Commitment</h2>
+            <p><strong>LinkSilo: Smart Link Organizer</strong> is designed with an <strong>offline-first</strong> philosophy. We strongly believe in protecting user privacy. Therefore, the core database containing your saved links, categories, tags, notes, and favorites is stored 100% locally on your own physical device using a secure SQLite database. We do not run cloud synchronization servers, and we do not have access to your personal links, bookmarks, or browsing habits.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Information We Process</h2>
+            <p>While the app operates locally, we utilize select third-party developer integrations to handle ads, subscriptions, metrics, and premium AI services. Here is how your data is processed:</p>
+            
+            <h3>A. Local Database Storage</h3>
+            <p>All bookmarks, URLs, custom notes, category lists, and tagging options you input remain entirely on your device's memory. This data is never transmitted to us or any external third parties unless you explicitly export it yourself as a backup (JSON/CSV).</p>
+
+            <h3>B. Google AdMob (Advertising)</h3>
+            <p>For users on the free tier, we display mobile ads using Google AdMob to support ongoing development. Google AdMob may collect and process device-specific information, such as your Advertising ID, device model, and limited usage metrics, to customize ad delivery or perform ad analytics.</p>
+
+            <h3>C. RevenueCat (In-App Subscriptions)</h3>
+            <p>To manage LinkSilo Pro memberships, we use RevenueCat. When you purchase a subscription through the Google Play Store, RevenueCat securely processes transaction receipts to verify purchase status. This information is associated with an anonymous identifier and does not contain personal identity data.</p>
+
+            <h3>D. Firebase Analytics & Crashlytics</h3>
+            <p>We collect anonymous statistics (such as button clicks, screen views, and crash reports) through Firebase to help us resolve app stability issues and improve navigation. This data is aggregated and cannot be used to identify you personally.</p>
+
+            <h3>E. AI Webpage Summaries (Premium Feature)</h3>
+            <p>When you explicitly request an AI webpage summary for a bookmark, the URL is securely sent to our server function (deployed on Vercel) to extract text and request the summary from the AI model. This URL is processed on-the-fly and is never stored permanently on our servers.</p>
+        </div>
+
+        <div class="card">
+            <h2>3. Biometric Data Security</h2>
+            <p>If you enable the **Secure Vault** feature, authentication is handled natively by the Android operating system using BiometricPrompt (fingerprint or face recognition). LinkSilo does not have access to, does not collect, and does not store your biometric credentials or data.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Your Controls & Data Export</h2>
+            <p>Because your data is stored locally, you have total control over it. You can:</p>
+            <ul>
+                <li>Clear all app data or uninstall the app to instantly delete your local database.</li>
+                <li>Export your entire bookmarks library to standard CSV or JSON backup files.</li>
+                <li>Reset the local database database from the app settings menu.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>5. Contact Us</h2>
+            <p>If you have any questions or suggestions regarding our Privacy Policy, please contact us at:</p>
+            <p>Email: <a href="mailto:"></a></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 LinkSilo. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
