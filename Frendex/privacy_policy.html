@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Frendex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #7155e3;
+      --primary-dark: #583bbd;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--card-bg);
+      border-radius: 24px;
+      padding: 40px 32px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      border: 1px solid var(--border-color);
+    }
+
+    .header {
+      text-align: center;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .date {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-dark);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-box {
+      background-color: #f1f5f9;
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 32px;
+      border: 1px solid var(--border-color);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 12px 8px;
+      }
+      .container {
+        padding: 24px 16px;
+        border-radius: 16px;
+      }
+      .logo {
+        font-size: 28px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="logo">Frendex</div>
+      <h1>Privacy Policy</h1>
+      <div class="date">Last Updated: July 28, 2026</div>
+    </div>
+
+    <p><strong>Frendex</strong> ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, disclosed, and safeguarded when you use our mobile application <strong>Frendex</strong> (the "Application").</p>
+
+    <p>Please read this Privacy Policy carefully. By accessing or using the Application, you agree to the collection and use of information in accordance with this policy.</p>
+
+    <h2>1. Information We Collect</h2>
+    
+    <p><strong>A. Personal Information You Provide:</strong></p>
+    <ul>
+      <li><strong>Account Credentials:</strong> Full Name, Email Address, and encrypted Password.</li>
+      <li><strong>Profile Information:</strong> Profile picture/avatar (optional).</li>
+      <li><strong>Expense & Ledger Data:</strong> Group titles, expense amounts, descriptions, categories, split shares, and payment settlements.</li>
+    </ul>
+
+    <p><strong>B. Automatically Collected Information & Device Data:</strong></p>
+    <ul>
+      <li><strong>Usage & Analytics Data:</strong> Anonymous app interaction events collected via Google Firebase Analytics to improve application stability and performance.</li>
+      <li><strong>Network & Device Information:</strong> Operating system version and network connectivity status (used for managing offline synchronization queues).</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <p>We use the collected information strictly for:</p>
+    <ul>
+      <li>Creating and maintaining your user account.</li>
+      <li>Calculating shared group balances, debts, and settlement ledgers.</li>
+      <li>Enabling real-time and offline synchronization across your devices.</li>
+      <li>Sending essential in-app notifications regarding new expenses, edits, and payments.</li>
+      <li>Improving Application stability, security, and user experience.</li>
+    </ul>
+
+    <h2>3. Data Storage & Security</h2>
+    <ul>
+      <li><strong>Database Security:</strong> All user data is securely stored using Supabase (hosted on AWS infrastructure) with enterprise-grade encryption (TLS/SSL in transit and AES-256 at rest).</li>
+      <li><strong>Row Level Security (RLS):</strong> Strict database access control policies ensure that only authorized group members or direct friends can view shared expense records.</li>
+      <li><strong>Offline Security:</strong> Local data cached for offline functionality is stored securely inside your device's browser IndexedDB container.</li>
+    </ul>
+
+    <h2>4. Information Sharing & Disclosure</h2>
+    <p>We <strong>do not</strong> sell, trade, or rent your personal information to third parties. We may disclose information only under the following circumstances:</p>
+    <ul>
+      <li><strong>Service Providers:</strong> Cloud infrastructure providers (Supabase for backend database hosting, Firebase for anonymous app performance analytics).</li>
+      <li><strong>Legal Requirements:</strong> If required by law or legal process to protect the safety, property, or legal rights of our users or the public.</li>
+    </ul>
+
+    <h2>5. Account & Data Deletion Rights</h2>
+    <p>You have full control over your personal information:</p>
+    <ul>
+      <li><strong>In-App Controls:</strong> You can edit or delete your account profile and expenses directly within the Application.</li>
+      <li><strong>Data Removal Request:</strong> To request permanent deletion of your account and associated personal data from our servers, send an email to <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a>. Upon request, all user credentials and linked records will be permanently purged within 30 days.</li>
+    </ul>
+
+    <h2>6. Children's Privacy</h2>
+    <p>The Application is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that a child under 13 has provided us with personal data, we will immediately delete it from our servers.</p>
+
+    <h2>7. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this policy.</p>
+
+    <div class="contact-box">
+      <h2 style="margin-top: 0;">8. Contact Us</h2>
+      <p>If you have any questions or concerns regarding this Privacy Policy, please contact us:</p>
+      <p style="margin-bottom: 0;"><strong>Email:</strong> <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 Frendex. All rights reserved.
+    </div>
+  </div>
+
+</body>
+</html>
