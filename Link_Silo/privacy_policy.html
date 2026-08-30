@@ -25,7 +25,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 40px auto;
             padding: 20px;
         }
@@ -110,7 +110,7 @@
         .badge {
             background-color: rgba(59, 130, 246, 0.1);
             color: var(--primary-light);
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 9999px;
             font-size: 0.85rem;
             font-weight: 600;
@@ -124,52 +124,70 @@
         <div class="header">
             <div class="badge">Privacy First</div>
             <h1>LinkSilo Privacy Policy</h1>
-            <p>Last updated: June 30, 2026</p>
+            <p>Last updated: August 31, 2026</p>
         </div>
 
         <div class="card">
-            <h2>1. Overview & Offline Commitment</h2>
-            <p><strong>LinkSilo: Smart Link Organizer</strong> is designed with an <strong>offline-first</strong> philosophy. We strongly believe in protecting user privacy. Therefore, the core database containing your saved links, categories, tags, notes, and favorites is stored 100% locally on your own physical device using a secure SQLite database. We do not run cloud synchronization servers, and we do not have access to your personal links, bookmarks, or browsing habits.</p>
+            <h2>1. Overview & Ecosystem Scope</h2>
+            <p>This Privacy Policy governs the <strong>LinkSilo Application Suite</strong>, which includes the <strong>LinkSilo Mobile Application</strong> (Android/iOS) and the <strong>LinkSilo Browser Extension</strong> (Google Chrome, Microsoft Edge). We are committed to protecting user privacy, data security, and transparency.</p>
+            <p>LinkSilo is designed as an offline-first link organizer. You can use LinkSilo in <strong>Guest Mode</strong> completely anonymously without creating an account or transmitting any personal data to our cloud servers.</p>
         </div>
 
         <div class="card">
-            <h2>2. Information We Process</h2>
-            <p>While the app operates locally, we utilize select third-party developer integrations to handle ads, subscriptions, metrics, and premium AI services. Here is how your data is processed:</p>
+            <h2>2. Information We Collect & How It Is Used</h2>
             
-            <h3>A. Local Database Storage</h3>
-            <p>All bookmarks, URLs, custom notes, category lists, and tagging options you input remain entirely on your device's memory. This data is never transmitted to us or any external third parties unless you explicitly export it yourself as a backup (JSON/CSV).</p>
+            <h3>A. Guest Mode (Local Storage)</h3>
+            <p>When operating in Guest Mode, your saved bookmarks, URLs, titles, descriptions, categories, and tags are stored 100% locally on your physical device or browser (using local storage / SQLite). No browsing data or link items are uploaded to our servers.</p>
 
-            <h3>B. Google AdMob (Advertising)</h3>
-            <p>For users on the free tier, we display mobile ads using Google AdMob to support ongoing development. Google AdMob may collect and process device-specific information, such as your Advertising ID, device model, and limited usage metrics, to customize ad delivery or perform ad analytics.</p>
-
-            <h3>C. RevenueCat (In-App Subscriptions)</h3>
-            <p>To manage LinkSilo Pro memberships, we use RevenueCat. When you purchase a subscription through the Google Play Store, RevenueCat securely processes transaction receipts to verify purchase status. This information is associated with an anonymous identifier and does not contain personal identity data.</p>
-
-            <h3>D. Firebase Analytics & Crashlytics</h3>
-            <p>We collect anonymous statistics (such as button clicks, screen views, and crash reports) through Firebase to help us resolve app stability issues and improve navigation. This data is aggregated and cannot be used to identify you personally.</p>
-
-            <h3>E. AI Webpage Summaries (Premium Feature)</h3>
-            <p>When you explicitly request an AI webpage summary for a bookmark, the URL is securely sent to our server function (deployed on Vercel) to extract text and request the summary from the AI model. This URL is processed on-the-fly and is never stored permanently on our servers.</p>
-        </div>
-
-        <div class="card">
-            <h2>3. Biometric Data Security</h2>
-            <p>If you enable the **Secure Vault** feature, authentication is handled natively by the Android operating system using BiometricPrompt (fingerprint or face recognition). LinkSilo does not have access to, does not collect, and does not store your biometric credentials or data.</p>
-        </div>
-
-        <div class="card">
-            <h2>4. Your Controls & Data Export</h2>
-            <p>Because your data is stored locally, you have total control over it. You can:</p>
+            <h3>B. Optional Account Sign-In & Cloud Synchronization</h3>
+            <p>If you choose to sign in with Google OAuth to enable cross-device cloud sync between your browser extension and mobile app:</p>
             <ul>
-                <li>Clear all app data or uninstall the app to instantly delete your local database.</li>
-                <li>Export your entire bookmarks library to standard CSV or JSON backup files.</li>
-                <li>Reset the local database database from the app settings menu.</li>
+                <li><strong>Account Information</strong>: We collect your name, email address, profile picture, and unique account ID via Google OAuth to authenticate your account.</li>
+                <li><strong>Bookmark Content</strong>: User-submitted URLs, page titles, descriptions, category preferences, and tags are securely saved to our Supabase database (encrypted via HTTPS) to allow you to access your bookmarks on all your devices.</li>
+                <li><strong>No Tracking / No Ads Data Selling</strong>: Your saved links and account data are strictly used to deliver bookmark organization services. We <strong>never sell, rent, or trade</strong> your personal data or saved links to third-party advertisers.</li>
+            </ul>
+
+            <h3>C. Browser Extension Disclosures & Permissions</h3>
+            <p>The LinkSilo Browser Extension strictly operates to capture and manage links explicitly saved by the user. It requires the following permissions:</p>
+            <ul>
+                <li><code>activeTab</code> & <code>tabs</code>: To capture the active web page title, URL, and meta description when you click the extension popup.</li>
+                <li><code>contextMenus</code>: To add right-click menu items ("Save Page to LinkSilo" and "Save Link to LinkSilo") for convenient background saving.</li>
+                <li><code>storage</code>: To cache local guest links and your authentication session offline.</li>
+                <li><code>notifications</code>: To display desktop confirmation toasts when saving via right-click menus.</li>
+                <li><code>identity</code>: To authenticate securely with Google Sign-In.</li>
+                <li><code>&lt;all_urls&gt;</code>: To fetch metadata, favicons, and preview images across websites you explicitly save.</li>
+            </ul>
+            <p><strong>Zero Remote Code Guarantee</strong>: All extension scripts (popup, background service workers, and content scripts) are 100% bundled locally within the extension package in compliance with Manifest V3. No remote code (e.g. <code>eval()</code> or CDN scripts) is executed.</p>
+        </div>
+
+        <div class="card">
+            <h2>3. Third-Party Integrations</h2>
+            
+            <h3>A. Google AdMob (Mobile App Free Tier)</h3>
+            <p>The mobile app free tier displays mobile ads powered by Google AdMob. AdMob may process limited device identifiers (such as Advertising ID) to deliver non-personalized or relevant ads.</p>
+
+            <h3>B. RevenueCat (In-App Subscriptions)</h3>
+            <p>To verify LinkSilo Pro memberships purchased through Google Play / App Store, RevenueCat processes anonymous purchase receipts to validate subscription status.</p>
+        </div>
+
+        <div class="card">
+            <h2>4. Security & Biometric Data</h2>
+            <p>If you enable the <strong>Secure Vault</strong> feature in the LinkSilo mobile app, biometric authentication (fingerprint or face unlock) is performed natively by your operating system via Android BiometricPrompt / iOS LocalAuthentication. LinkSilo never collects, accesses, or stores your biometric credentials.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Data Retention, Control & Account Deletion</h2>
+            <p>You have full ownership of your data at all times:</p>
+            <ul>
+                <li><strong>Delete Saved Links</strong>: You can delete any saved bookmark at any time in the app or extension. Deleting a link removes it permanently from your account/device.</li>
+                <li><strong>Local Reset</strong>: You can clear app storage or uninstall the app/extension to erase all local data.</li>
+                <li><strong>Account Deletion Request</strong>: You may request complete deletion of your account and all associated cloud data by emailing us at <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a>.</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>5. Contact Us</h2>
-            <p>If you have any questions or suggestions regarding our Privacy Policy, please contact us at:</p>
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions, feedback, or data privacy requests regarding LinkSilo, please contact our support team at:</p>
             <p>Email: <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a></p>
         </div>
 
