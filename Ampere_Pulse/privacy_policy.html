@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Ampere Pulse</title>
+    <title>Privacy Policy - Ampere Pulse: Charger Tester</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -54,52 +53,79 @@
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy for Ampere Pulse</h1>
-        <p class="last-updated">Last Updated: May 4, 2026</p>
-        
-        <p>This Privacy Policy describes how <strong>Ampere Pulse</strong> ("we", "our", or "the App") handles your information. By using the App, you agree to the collection and use of information in accordance with this policy.</p>
-        
+        <h1>Privacy Policy for Ampere Pulse: Charger Tester</h1>
+        <p class="last-updated">Last Updated: October 4, 2026</p>
+
+        <p>This Privacy Policy explains what information <strong>Ampere Pulse: Charger Tester</strong> (also shown on your device as "Ampere Pulse"; "we", "our", or "the App") uses, what stays on your phone, and what is shared with the third-party services the App relies on. The App is published by SM Tech Studio on Google Play (package name <code>com.shahid.amperepulse</code>).</p>
+
         <hr>
 
-        <h3>1. Information Collection and Use</h3>
-        <p>To provide a comprehensive battery monitoring experience, we collect certain non-personal device information:</p>
+        <h3>1. Information That Stays on Your Device</h3>
+        <p>The App reads the following from your phone's battery sensor to show live readings and run charger tests:</p>
         <ul>
-            <li><strong>Battery Diagnostics</strong>: Real-time current (mA), voltage, temperature, health status, and charging cycles.</li>
-            <li><strong>Device Metadata</strong>: Device manufacturer, model name, and Android OS version.</li>
+            <li><strong>Battery readings</strong>: charge level, charging/discharging current (mA), power (W), voltage, temperature, remaining charge (mAh), health status, battery technology, connection type (AC, USB, wireless or dock), and, on supported devices, charge cycle count.</li>
+            <li><strong>Saved charger tests</strong>: the name you give each test, its results (average and peak current, power, temperature, battery level) and the date.</li>
+            <li><strong>Your settings</strong>: theme, temperature unit and current unit.</li>
         </ul>
-        <p>This information is processed locally on your device to display diagnostics and is not stored on our servers.</p>
+        <p>This information is stored only on your device. We do not run our own servers and we do not receive it. Saved tests and settings remain on your device until you delete them in the App or uninstall the App.</p>
 
-        <h3>2. Third-Party Services (Advertising)</h3>
-        <p>The App uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect and use certain data to show relevant ads. This data may include:</p>
+        <h3>2. Analytics (Google Firebase Analytics)</h3>
+        <p>The App uses <strong>Google Firebase Analytics</strong> to understand how the App is used and to improve it. Firebase may collect:</p>
         <ul>
-            <li>Advertising ID (AAID)</li>
-            <li>Approximate Location (IP-based)</li>
-            <li>App interaction data</li>
+            <li>An app-instance identifier generated for this installation</li>
+            <li>Device information such as manufacturer, model, Android version and language</li>
+            <li>Approximate location (country/region, derived from your IP address)</li>
+            <li>In-app events, for example: app opened, screen viewed, charger test started or completed (including average current and connection type), ad loaded or shown, and whether the App was opened without an internet connection</li>
         </ul>
-        <p>For more information, please visit <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy & Terms</a>.</p>
+        <p>The App also uses <strong>Firebase Remote Config</strong> to adjust app settings (such as how often ads appear) without an app update; this sends the app-instance identifier and basic device information to Google.</p>
+        <p>Firebase data is processed by Google. See <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy and Security</a>.</p>
 
-        <h3>3. Permissions</h3>
-        <p>The App requests the following permissions to function:</p>
+        <h3>3. Advertising (Google AdMob)</h3>
+        <p>The App is free and supported by ads from <strong>Google AdMob</strong>. AdMob may collect and use:</p>
         <ul>
-            <li><strong>POST_NOTIFICATIONS</strong>: To show real-time battery status in your notification tray.</li>
-            <li><strong>INTERNET</strong>: To load advertisements via AdMob.</li>
+            <li>Your device's Advertising ID</li>
+            <li>Approximate location (derived from your IP address)</li>
+            <li>Ad interaction data (for example, ads shown and clicked) and diagnostic information</li>
+            <li>Device information such as model and Android version</li>
+        </ul>
+        <p>This data is used to show ads, measure them, prevent fraud and, where you have allowed it, personalize ads. You can reset or delete your Advertising ID, or opt out of personalized ads, in your phone's settings (Settings &rarr; Google &rarr; Ads, or Settings &rarr; Privacy &rarr; Ads, depending on your device). See <a href="https://policies.google.com/technologies/partner-sites" target="_blank">How Google uses information from apps that use its services</a>.</p>
+        <p>The App offers an optional rewarded video: if you choose to watch one, pop-up ads are paused for a period of time. Watching is never required.</p>
+
+        <h3>4. Your Consent Choices (EEA, UK and Switzerland)</h3>
+        <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the App shows Google's consent form before any ads are requested. You can accept or decline the use of your data for ads and analytics, and change your choice at any time in the App under <strong>Settings &rarr; Privacy Options</strong>. Your choice is also passed to Firebase Analytics.</p>
+
+        <h3>5. Ratings</h3>
+        <p>After some charger tests, the App may show Google Play's in-app review dialog. This is handled entirely by Google Play; we do not receive your rating or review through the App.</p>
+
+        <h3>6. Permissions</h3>
+        <ul>
+            <li><strong>Notifications (POST_NOTIFICATIONS)</strong>: to alert you when your battery is low (below 20%) or reaches 80% or full while charging. You can turn this off at any time in your phone's settings.</li>
+            <li><strong>Internet and network state</strong>: used by Google AdMob and Firebase to load ads, send analytics and fetch app settings. The App's battery features work without an internet connection.</li>
+            <li><strong>Advertising ID (AD_ID)</strong>: used by Google AdMob, as described in section 3.</li>
+            <li><strong>Wake lock and vibration</strong>: used by the notification system and Google services to deliver alerts and complete background tasks.</li>
         </ul>
 
-        <h3>4. Data Security</h3>
-        <p>We do not collect any personally identifiable information (PII) such as your name, email address, or phone number. All battery-related data remains on your device and is cleared when the App is closed or uninstalled.</p>
+        <h3>7. Data Sharing</h3>
+        <p>We do not sell your information. We do not share it with anyone other than Google, which processes data as described above for analytics, app configuration and advertising.</p>
 
-        <h3>5. Children's Privacy</h3>
-        <p>Our App does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children.</p>
+        <h3>8. Data Retention and Deletion</h3>
+        <p>Data stored on your device is deleted when you delete it in the App or uninstall the App. Data collected by Google Firebase and AdMob is kept according to Google's retention policies. To ask us about your data, or to request deletion of analytics data associated with your installation, contact us at the email address below.</p>
 
-        <h3>6. Changes to This Privacy Policy</h3>
-        <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.</p>
+        <h3>9. Security</h3>
+        <p>Data sent to Google services is encrypted in transit. We do not collect your name, email address, phone number or account details; the App has no sign-in.</p>
 
-        <h3>7. Contact Us</h3>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-        <p><strong>smtechnologies.dev@gmail.com<strong></p>
+        <h3>10. Children's Privacy</h3>
+        <p>The App is not directed to children under 13, and we do not knowingly collect personal information from children. If you believe a child has used the App and you would like their data removed, contact us.</p>
+
+        <h3>11. Changes to This Privacy Policy</h3>
+        <p>We may update this policy when the App changes. The "Last Updated" date at the top shows the latest version.</p>
+
+        <h3>12. Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy or your data, contact us at:</p>
+        <p><strong><a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a></strong></p>
     </div>
     <footer>
-        &copy; 2026 Ampere Pulse. All rights reserved.
+        &copy; 2026 SM Tech Studio. Ampere Pulse: Charger Tester. All rights reserved.
     </footer>
 </body>
 </html>
