@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - MotionAlign Cues</title>
+    <title>Privacy Policy - MotionAlign: Car Sickness Dots</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -187,44 +187,55 @@
             <div class="logo-box">
                 <span class="logo-icon">🚗</span>
             </div>
-            <h1>MotionAlign Cues</h1>
-            <div class="date">Last updated: May 18, 2026</div>
+            <h1>MotionAlign: Car Sickness Dots</h1>
+            <div class="date">Last updated: October 6, 2026</div>
         </header>
 
-        <p><strong>MotionAlign Cues</strong> ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains what information our app accesses, why it is needed, and how it is handled. By using our App, you agree to the terms described here.</p>
+        <p><strong>MotionAlign: Car Sickness Dots</strong> (the "App") is developed by SM Tech Studio ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains what information our app accesses, why it is needed, and how it is handled. By using our App, you agree to the terms described here.</p>
 
-        <h2>1. Information We Access (But Do Not Store)</h2>
-        <p>Our application operates under a strict local-first architecture to provide real-time visual cues. Your sensor data belongs solely to you and processes entirely within your local device space:</p>
+        <h2>1. Information Processed Only on Your Device</h2>
+        <p>The motion cues themselves run entirely on your device:</p>
         <ul>
-            <li><strong>Accelerometer / Physical Activity:</strong> The App requires access to your device's raw accelerometer sensors to detect vehicle motion (acceleration, braking, and turning) in real-time. This physics calculation happens exclusively on your device. No sensor data is ever captured, saved to disk, or transmitted over the network.</li>
-            <li><strong>Display Over Other Apps (System Alert Window):</strong> To draw the animated motion dots over your other active applications without interrupting your workflow.</li>
-            <li><strong>Foreground Service:</strong> To keep the physics engine running seamlessly in the background while you read or watch videos.</li>
-            <li><strong>Notifications:</strong> To display an ongoing persistent notification, ensuring you have full control to instantly stop the background service at any time.</li>
+            <li><strong>Motion sensors:</strong> The App reads your device's motion sensors (accelerometer, and where available the system's gravity and linear-acceleration sensors) to detect vehicle motion such as turning, braking and accelerating. This calculation happens only on your device. Sensor readings are never saved or transmitted.</li>
+            <li><strong>Display over other apps:</strong> Used to draw the motion dots on top of your other apps. The dots do not read or capture what is on your screen.</li>
+            <li><strong>Foreground service:</strong> Keeps the motion cues running while you use other apps.</li>
+            <li><strong>Notifications:</strong> Shows an ongoing notification while the cues are running, with a Stop button so you can turn them off at any time.</li>
+            <li><strong>Settings:</strong> Your preferences (dot size, color, layout, sensitivity) are stored only on your device.</li>
         </ul>
 
         <div class="highlight-box">
-            <p><strong>Security Note:</strong> Because all operations take place strictly on your physical device, your data is inherently secure. A data breach of your physical location or movement history from our end is mathematically impossible because we run no external servers or databases.</p>
+            <p><strong>Note:</strong> We do not operate our own servers or databases, and we never collect your motion data, your location history, or the content of other apps.</p>
         </div>
 
         <h2>2. Advertising (Google AdMob)</h2>
-        <p>The App uses Google AdMob to display advertisements to support ongoing development. Google AdMob may collect and process device identifiers (such as Android Advertising ID or iOS IDFA) to serve relevant, personalized, or non-personalized advertisements. This processing is managed entirely by Google's SDK and is subject to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
-        <p>You can opt out of personalized advertisements on your mobile device at any time by configuring your device operating system settings (Settings → Google → Ads → Opt out of Ads Personalization).</p>
+        <p>The App uses Google AdMob to display advertisements to support ongoing development. Where you have consented (or where consent is not required), ads may be personalized; otherwise non-personalized ads are shown. The Google Mobile Ads SDK may collect device identifiers (such as the Android Advertising ID), your IP address (from which an approximate location may be derived), and ad interaction and diagnostic data, in order to serve ads, measure them and prevent fraud. This data is processed and shared by Google under <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+        <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the App asks for your consent before ads are requested, using Google's consent tools. You can opt out of personalized advertising on your device at any time (Settings → Google → Ads → Delete advertising ID, or Opt out of Ads Personalization).</p>
 
-        <h2>3. Data Security</h2>
-        <p>We implement secure, local-first coding practices. Since your motion calculations remain entirely within your private device environment, you have complete privacy. We do not transmit your personal or sensor data over the internet.</p>
+        <h2>3. Analytics and Crash Reporting (Google Firebase)</h2>
+        <p>We use Firebase Analytics and Firebase Crashlytics, provided by Google, to understand how the App's features are used and to fix crashes. These services collect:</p>
+        <ul>
+            <li>An app-instance identifier generated by Firebase</li>
+            <li>Device model, operating system version, app version and language</li>
+            <li>App interactions, for example opening the App, granting permissions, starting or stopping the cues, and changing settings</li>
+            <li>Crash logs and diagnostic information</li>
+        </ul>
+        <p>We do not collect your name, email, contacts or precise location through these services, and motion sensor readings are never included. Analytics data is retained according to Firebase's default retention settings and processed under <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase's privacy and security terms</a>.</p>
 
-        <h2>4. Children's Privacy</h2>
+        <h2>4. Data Security and Deletion</h2>
+        <p>Data sent to Google AdMob and Firebase is encrypted in transit. Because we do not hold any account or personal profile for you, we cannot identify you from this data. You can request deletion of analytics data associated with your app installation by emailing us (see Contact Us); uninstalling the App also stops all further collection and removes your locally stored settings.</p>
+
+        <h2>5. Children's Privacy</h2>
         <p>Our App is not directed at children under 13 years of age. We do not knowingly collect, request, or store any personal information from children.</p>
 
-        <h2>5. Changes to This Policy</h2>
+        <h2>6. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time to reflect operational or security improvements. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically.</p>
 
-        <h2>6. Contact Us</h2>
+        <h2>7. Contact Us</h2>
         <p>If you have any questions or concerns about this Privacy Policy or local data storage practices, please contact us at:</p>
         <p><a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a></p>
         
         <footer>
-            © 2026 MotionAlign Cues. All rights reserved.
+            © 2026 SM Tech Studio. All rights reserved.
         </footer>
     </div>
 </body>
