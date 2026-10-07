@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - LinkSilo</title>
+    <meta name="description" content="How LinkSilo (app and browser extension) collects, uses and deletes your data.">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="apple-touch-icon" href="./app-icon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1789GCQC7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-D1789GCQC7');
+    </script>
     <style>
         :root {
             --bg-color: #0c101d;
@@ -117,78 +129,159 @@
             display: inline-block;
             margin-bottom: 15px;
         }
+
+        table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 0.95rem; }
+        th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--border-color); }
+        th { color: #ffffff; font-weight: 600; }
+        .note { background: rgba(59,130,246,0.08); border-left: 3px solid var(--primary-color); padding: 12px 16px; border-radius: 6px; }
+        .toc a { display: inline-block; margin: 0 12px 6px 0; }
+        @media (max-width: 600px) { table, thead, tbody, tr, th, td { font-size: 0.9rem; } th, td { padding: 8px 6px; } }
     </style>
 </head>
 <body>
     <div class="container">
+        <div style="margin-bottom: 24px;">
+            <a href="index.html" style="font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;">&larr; Back to LinkSilo Home</a>
+        </div>
         <div class="header">
-            <div class="badge">Privacy First</div>
+            <div class="badge">Privacy</div>
             <h1>LinkSilo Privacy Policy</h1>
-            <p>Last updated: August 31, 2026</p>
+            <p>Last updated: October 6, 2026</p>
         </div>
 
         <div class="card">
-            <h2>1. Overview & Ecosystem Scope</h2>
-            <p>This Privacy Policy governs the <strong>LinkSilo Application Suite</strong>, which includes the <strong>LinkSilo Mobile Application</strong> (Android/iOS) and the <strong>LinkSilo Browser Extension</strong> (Google Chrome, Microsoft Edge). We are committed to protecting user privacy, data security, and transparency.</p>
-            <p>LinkSilo is designed as an offline-first link organizer. You can use LinkSilo in <strong>Guest Mode</strong> completely anonymously without creating an account or transmitting any personal data to our cloud servers.</p>
+            <h2>1. Who we are and what this covers</h2>
+            <p>This policy explains how <strong>LinkSilo</strong> ("we", "us") handles your data. It covers the <strong>LinkSilo Android app</strong> and the <strong>LinkSilo browser extension</strong> (Chrome and Chromium-based browsers).</p>
+            <p>Questions or requests: <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a>.</p>
+            <p class="toc">
+                <a href="#collect">What we collect</a>
+                <a href="#ai">AI summaries</a>
+                <a href="#ads">Ads &amp; consent</a>
+                <a href="#sharing">Who we share with</a>
+                <a href="#extension">Browser extension</a>
+                <a href="#deletion">Retention &amp; deletion</a>
+                <a href="#rights">Your choices</a>
+            </p>
         </div>
 
-        <div class="card">
-            <h2>2. Information We Collect & How It Is Used</h2>
-            
-            <h3>A. Guest Mode (Local Storage)</h3>
-            <p>When operating in Guest Mode, your saved bookmarks, URLs, titles, descriptions, categories, and tags are stored 100% locally on your physical device or browser (using local storage / SQLite). No browsing data or link items are uploaded to our servers.</p>
+        <div class="card" id="collect">
+            <h2>2. What we collect and why</h2>
 
-            <h3>B. Optional Account Sign-In & Cloud Synchronization</h3>
-            <p>If you choose to sign in with Google OAuth to enable cross-device cloud sync between your browser extension and mobile app:</p>
+            <h3>A. Using LinkSilo without an account (guest mode)</h3>
+            <p>Your links, titles, descriptions, categories, tags, notes and reminders are stored <strong>only on your device</strong> (app) or <strong>in your browser</strong> (extension). They are not uploaded to our servers.</p>
+            <p>Even in guest mode, the Android app uses Google services that collect some technical data (see <a href="#analytics">Analytics</a> and <a href="#ads">Ads</a>). To show a preview of a link you save, the app contacts that website (and, for some sites, its public preview service such as TikTok or Instagram embeds) and requests a site icon from Google's favicon service, which receives the site's domain.</p>
+
+            <h3>B. If you sign in (optional, for sync)</h3>
+            <p>Signing in with Google turns on sync between your phone and the browser extension. We then collect and store:</p>
+            <table>
+                <thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+                <tbody>
+                    <tr><td>Name, email address, profile picture and account ID (from Google Sign-In)</td><td>Create and identify your account</td></tr>
+                    <tr><td>Your saved links: URL, title, description, preview image, site icon and domain; categories, tags, favorite/archived/read status, Private Folder flag, AI summaries, notes and reminder times</td><td>Sync your library across your devices</td></tr>
+                    <tr><td>Number of AI summaries used per day</td><td>Enforce daily limits</td></tr>
+                    <tr><td>Subscription status</td><td>Unlock Pro features</td></tr>
+                </tbody>
+            </table>
+
+            <h3 id="analytics">C. Analytics (Android app)</h3>
+            <p>We use <strong>Google Firebase Analytics</strong> to understand how the app is used and to fix problems. It collects app interactions (for example screens viewed, links saved, sign-in, ad events and errors), an app instance identifier, device model, operating system version, approximate location derived from IP address, and, after you sign in, your LinkSilo account ID. We use <strong>Firebase Remote Config</strong> to adjust app settings (such as how often ads appear) without an update.</p>
+
+            <h3>D. Purchases</h3>
+            <p>Subscriptions are processed by <strong>Google Play</strong>; we never see your payment card details. <strong>RevenueCat</strong> receives your purchase history and your LinkSilo account ID to verify your subscription. We store whether your account is Pro and until when.</p>
+
+            <h3>E. Device features</h3>
             <ul>
-                <li><strong>Account Information</strong>: We collect your name, email address, profile picture, and unique account ID via Google OAuth to authenticate your account.</li>
-                <li><strong>Bookmark Content</strong>: User-submitted URLs, page titles, descriptions, category preferences, and tags are securely saved to our Supabase database (encrypted via HTTPS) to allow you to access your bookmarks on all your devices.</li>
-                <li><strong>No Tracking / No Ads Data Selling</strong>: Your saved links and account data are strictly used to deliver bookmark organization services. We <strong>never sell, rent, or trade</strong> your personal data or saved links to third-party advertisers.</li>
-            </ul>
-
-            <h3>C. Browser Extension Disclosures & Permissions</h3>
-            <p>The LinkSilo Browser Extension strictly operates to capture and manage links explicitly saved by the user. It requires the following permissions:</p>
-            <ul>
-                <li><code>activeTab</code> & <code>tabs</code>: To capture the active web page title, URL, and meta description when you click the extension popup.</li>
-                <li><code>contextMenus</code>: To add right-click menu items ("Save Page to LinkSilo" and "Save Link to LinkSilo") for convenient background saving.</li>
-                <li><code>storage</code>: To cache local guest links and your authentication session offline.</li>
-                <li><code>notifications</code>: To display desktop confirmation toasts when saving via right-click menus.</li>
-                <li><code>identity</code>: To authenticate securely with Google Sign-In.</li>
-                <li><code>&lt;all_urls&gt;</code>: To fetch metadata, favicons, and preview images across websites you explicitly save.</li>
-            </ul>
-            <p><strong>Zero Remote Code Guarantee</strong>: All extension scripts (popup, background service workers, and content scripts) are 100% bundled locally within the extension package in compliance with Manifest V3. No remote code (e.g. <code>eval()</code> or CDN scripts) is executed.</p>
-        </div>
-
-        <div class="card">
-            <h2>3. Third-Party Integrations</h2>
-            
-            <h3>A. Google AdMob (Mobile App Free Tier)</h3>
-            <p>The mobile app free tier displays mobile ads powered by Google AdMob. AdMob may process limited device identifiers (such as Advertising ID) to deliver non-personalized or relevant ads.</p>
-
-            <h3>B. RevenueCat (In-App Subscriptions)</h3>
-            <p>To verify LinkSilo Pro memberships purchased through Google Play / App Store, RevenueCat processes anonymous purchase receipts to validate subscription status.</p>
-        </div>
-
-        <div class="card">
-            <h2>4. Security & Biometric Data</h2>
-            <p>If you enable the <strong>Secure Vault</strong> feature in the LinkSilo mobile app, biometric authentication (fingerprint or face unlock) is performed natively by your operating system via Android BiometricPrompt / iOS LocalAuthentication. LinkSilo never collects, accesses, or stores your biometric credentials.</p>
-        </div>
-
-        <div class="card">
-            <h2>5. Data Retention, Control & Account Deletion</h2>
-            <p>You have full ownership of your data at all times:</p>
-            <ul>
-                <li><strong>Delete Saved Links</strong>: You can delete any saved bookmark at any time in the app or extension. Deleting a link removes it permanently from your account/device.</li>
-                <li><strong>Local Reset</strong>: You can clear app storage or uninstall the app/extension to erase all local data.</li>
-                <li><strong>Account Deletion Request</strong>: You may request complete deletion of your account and all associated cloud data by emailing us at <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a>.</li>
+                <li><strong>Fingerprint / screen lock</strong> for the Private Folder is handled entirely by Android. We never receive or store biometric data.</li>
+                <li><strong>Notifications</strong> are used only for reminders you set; they are scheduled on your device.</li>
+                <li><strong>Photos/media</strong>: only used if you choose to save a QR code image to your gallery.</li>
             </ul>
         </div>
 
+        <div class="card" id="ai">
+            <h2>3. AI summaries</h2>
+            <p>AI summaries are available to signed-in users. When you request one, our server receives the link's URL, title and description, downloads the public web page, and sends that page text to <strong>Google's Gemini API</strong> to generate the summary. The summary is saved with the link.</p>
+            <p class="note">Google may use content sent through the Gemini API to provide and improve its services, under Google's own terms. Do not request summaries of pages you consider sensitive.</p>
+        </div>
+
+        <div class="card" id="ads">
+            <h2>4. Ads and consent</h2>
+            <p>The free version of the Android app shows ads from <strong>Google AdMob</strong>. AdMob may collect your device's advertising ID, IP address, device information and ad interactions to show, measure and (where you allow it) personalize ads, and to prevent fraud.</p>
+            <ul>
+                <li>In the EEA, the UK and Switzerland (and where required elsewhere), the app asks for your consent using Google's consent message before personalized ads are shown. You can change your choice anytime in <strong>Settings &rsaquo; Ad Privacy Choices</strong>.</li>
+                <li>You can reset or delete your advertising ID in your Android settings.</li>
+                <li>Pro subscribers see no ads.</li>
+            </ul>
+            <p>The browser extension shows no ads.</p>
+        </div>
+
+        <div class="card" id="sharing">
+            <h2>5. Who we share data with</h2>
+            <p>We <strong>do not sell</strong> your personal data or your saved links. We share data only with these service providers, to run LinkSilo:</p>
+            <table>
+                <thead><tr><th>Provider</th><th>What for</th></tr></thead>
+                <tbody>
+                    <tr><td>Supabase</td><td>Account sign-in, cloud database and server functions (sync, AI, account deletion)</td></tr>
+                    <tr><td>Google (Sign-In, Firebase Analytics, Remote Config, AdMob, Gemini API, favicon service)</td><td>Sign-in, analytics, app settings, ads, AI summaries, site icons</td></tr>
+                    <tr><td>RevenueCat</td><td>Subscription verification</td></tr>
+                    <tr><td>Google Play</td><td>App distribution and payments</td></tr>
+                </tbody>
+            </table>
+            <p>We may also disclose information if required by law.</p>
+        </div>
+
+        <div class="card" id="extension">
+            <h2>6. Browser extension</h2>
+            <p>The extension only acts when you use it. It does not track your browsing and contains no analytics or ads.</p>
+            <ul>
+                <li><code>activeTab</code>, <code>tabs</code> and the content script: read the current page's title, URL, description, preview image and icon <strong>only when you click save</strong>.</li>
+                <li><code>contextMenus</code>: "Save to LinkSilo" right-click options.</li>
+                <li><code>storage</code>: keep guest links and your sign-in session in your browser.</li>
+                <li><code>notifications</code>: confirm saves made from the right-click menu.</li>
+                <li><code>identity</code>: sign in with Google.</li>
+            </ul>
+            <p>Guest links stay in your browser. When you are signed in, saved links go to your LinkSilo account (Supabase) and sync with the app. All extension code is bundled in the package; no remote code is executed.</p>
+        </div>
+
         <div class="card">
-            <h2>6. Contact Us</h2>
-            <p>If you have any questions, feedback, or data privacy requests regarding LinkSilo, please contact our support team at:</p>
-            <p>Email: <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a></p>
+            <h2>7. Security</h2>
+            <p>Data is sent over encrypted connections (HTTPS) and stored with our providers, who encrypt data at rest. Each account can only access its own data. The <strong>Private Folder</strong> hides links behind your device's fingerprint or screen lock; it is a privacy feature, <strong>not encryption</strong>. No method of storage is 100% secure.</p>
+        </div>
+
+        <div class="card" id="deletion">
+            <h2>8. Retention and deletion</h2>
+            <ul>
+                <li><strong>Deleting a link, note, tag or reminder</strong> permanently removes it from our database the next time your device syncs.</li>
+                <li><strong>Deleting your account</strong> permanently deletes your account and all cloud data, including links, notes, tags, reminders, AI usage and subscription records at RevenueCat. You can do it in two ways:
+                    <ul>
+                        <li><strong>In the app (instant):</strong> <strong>Settings &rsaquo; Privacy &amp; Account &rsaquo; Delete Account</strong>.</li>
+                        <li><strong>By email (without the app):</strong> write to <a href="mailto:smtechnologies.dev@gmail.com?subject=Delete%20my%20LinkSilo%20account">smtechnologies.dev@gmail.com</a> with the subject "Delete my LinkSilo account", from the Google email address you signed in with. We delete the account within 7 days and confirm by email.</li>
+                    </ul>
+                </li>
+                <li>Data on your device is removed when you delete it, sign out (synced data), or uninstall the app.</li>
+                <li>Analytics data is kept by Google Firebase for up to 14 months. Our providers may keep data in routine backups for a limited time before it is overwritten.</li>
+                <li>Deleting your account does not cancel a Google Play subscription; cancel it in Google Play.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="rights">
+            <h2>9. Your choices and rights</h2>
+            <ul>
+                <li>Use LinkSilo without an account, so your links never leave your device.</li>
+                <li>Export your data anytime in the app (<strong>Settings &rsaquo; Export</strong>, JSON or CSV).</li>
+                <li>Change your ad consent in <strong>Settings &rsaquo; Ad Privacy Choices</strong> (where available).</li>
+                <li>Delete your account and data as described above.</li>
+                <li>Depending on where you live (for example under the GDPR or US state laws), you may have the right to access, correct, delete or port your data and to object to certain processing. Email us at <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a>; we respond within 30 days.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>10. Children</h2>
+            <p>LinkSilo is not directed to children under 13, and we do not knowingly collect personal data from them. If you believe a child has given us personal data, contact us and we will delete it.</p>
+        </div>
+
+        <div class="card">
+            <h2>11. Changes and contact</h2>
+            <p>We will update this page when our practices change and revise the date at the top. For questions or privacy requests, email <a href="mailto:smtechnologies.dev@gmail.com">smtechnologies.dev@gmail.com</a>.</p>
         </div>
 
         <div class="footer">
