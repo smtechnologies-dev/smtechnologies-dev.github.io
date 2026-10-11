@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Sajda: Salah Spots & Tracker</title>
+    <title>Privacy Policy - Sajda: Travel Prayer Journal</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -70,42 +70,83 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p><strong>Last Updated: July 3, 2026</strong></p>
-        
-        <p>Welcome to <strong>Sajda: Salah Spots & Tracker</strong>. We respect your privacy and are committed to protecting the location and prayer data you log in our app. This privacy policy explains how we handle your information.</p>
+        <p><strong>Last Updated: October 11, 2026</strong></p>
+
+        <p>Welcome to <strong>Sajda: Travel Prayer Journal</strong> ("Sajda", "the app"), developed by <strong>SM Technologies</strong> ("we", "us"). Sajda helps you remember every place you have prayed and gives you prayer times, a Qibla compass and a Salah tracker. We respect your privacy and keep your data on your device. This policy explains what the app accesses and how it is used.</p>
 
         <div class="highlight">
-            <p>Sajda: Salah Spots & Tracker is an offline-first and privacy-focused companion. All of your saved Sajda spots (mosques, travel pray areas, home, office), coordinates, and personal prayer logs are stored exclusively in your device's local memory and are never uploaded to any server.</p>
+            <p>Sajda has no accounts, no ads and no servers of its own. Your saved prayer spots, coordinates, photos and prayer logs are stored on your device and are never uploaded to us. The app does send limited usage statistics to Google Analytics; section 1f lists exactly what they contain.</p>
         </div>
 
-        <h2>1. Information We Access and How We Use It</h2>
-        
-        <h3>a. Location Information (Sajda Spots & Map)</h3>
-        <p>The core feature of Sajda is allowing you to log and map the physical spots where you pray. The app requests location access for:</p>
+        <h2>1. Information the App Accesses and How It Is Used</h2>
+
+        <h3>a. Location</h3>
+        <p>With your permission, the app uses your device's location to:</p>
         <ul>
-            <li><strong>Sajda Spot Mapping:</strong> Dropping pins on an interactive map to mark, name, and categorize locations (such as Mosque, Home, Office, Travel, or Other) where you have performed prayers.</li>
-            <li><strong>Local Prayer Time Calculations:</strong> Accessing your coordinates offline to calculate highly accurate solar prayer times for your current location.</li>
+            <li><strong>Calculate prayer times and Qibla direction</strong> for where you are. These calculations run on your device without a network connection.</li>
+            <li><strong>Save and show prayer spots</strong> (mosque, home, office, travel and other places) on the map.</li>
+            <li><strong>Show the compass heading</strong> on the Qibla screen.</li>
         </ul>
-        <p><strong>Strictly Local & Offline:</strong> GPS coordinates, geocoded addresses, and dropped pins are processed directly on your device. We do not operate external databases, and your location coordinates are <strong>never</strong> transmitted to our servers or third parties.</p>
+        <p>The app reads your location only while it is open and you are using these features. It does not request background location. The location you choose for prayer times is saved on your device so that reminders and the home screen widget can keep working; it is not sent to us.</p>
+        <p><strong>Third-party map and place-name services:</strong> To draw the map and to turn coordinates into a city and country name, the app uses Google Maps and your device's built-in geocoding service (on most Android phones this is provided by Google). The map area you view and the coordinates you look up are sent to that provider for this purpose, under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. If you tap <em>Google Maps</em> on a spot, its coordinates are passed to the Google Maps app or website to open that place.</p>
 
-        <h3>b. Prayer Records and Statistics</h3>
-        <p>When you log prayers, associate them with a specific Sajda spot, or record statistics, that data remains stored in your device's secure local storage (using AsyncStorage and Redux-Persist). You retain full ownership and control over your history.</p>
+        <h3>b. Photos and Camera</h3>
+        <p>If you choose to attach a photo to a spot, the app asks for access to your photo gallery or your camera, depending on which one you tap. Access is requested only at that moment. Photos you add are copied into the app's private storage on your device and are not uploaded anywhere.</p>
 
-        <h3>c. Anonymous Usage Data (Optional)</h3>
-        <p>The app may collect aggregated, anonymous usage events (such as navigating to the map screen or logging a salah) via Firebase Analytics. This is used solely to evaluate app stability and performance, containing absolutely no location coordinates or personally identifiable information (PII).</p>
+        <h3>c. Prayer Records, Saved Spots and Settings</h3>
+        <p>Your prayer logs, streaks, saved spots, tasbeeh counts, fasting records and settings are stored locally on your device. You own and control this data.</p>
 
-        <h2>2. Data Storage and Control</h2>
-        <p>Since all data is offline and device-bound, deleting the app will permanently remove your saved Sajda spots and prayer history. We recommend securing your device with biometrics or a PIN to prevent unauthorized physical access to your records.</p>
+        <h3>d. Notifications and Alarms</h3>
+        <p>If you allow notifications, the app schedules local reminders for the five daily prayer times (Azan) and, if you turn it on, a Jumu'ah reminder on Fridays. These are created and delivered on your device. The app uses exact-alarm and boot-completed permissions only so that reminders fire on time and are restored after a restart. No push-notification server is involved.</p>
 
-        <h2>3. Third-Party Libraries</h2>
-        <p>Sajda integrates native mapping services and on-device geocoding APIs. These functions run directly through your mobile operating system's built-in services and do not share your mapped prayer spots with external advertisement networks.</p>
+        <h3>e. Home Screen Widget</h3>
+        <p>The optional home screen widget reads your saved location and settings on your device to show today's prayer times. Nothing is sent from the widget.</p>
 
-        <h2>4. Contact Us</h2>
-        <p>For questions or support regarding Sajda: Salah Spots & Tracker, reach out to us at:</p>
-        <p><strong>Email:</strong>smtechnologies.dev@gmail.com </p>
+        <h3>f. Usage Statistics (Google Analytics for Firebase)</h3>
+        <p>The app uses Google Analytics for Firebase to understand which features are used. This runs automatically; the app currently has no setting to turn it off. It sends the following to Google:</p>
+        <ul>
+            <li><strong>An app-instance identifier:</strong> a random ID created when the app is installed. It is not your name, email, phone number or Advertising ID.</li>
+            <li><strong>Screen views:</strong> which screens of the app are opened.</li>
+            <li><strong>Feature events:</strong> that a spot was added, edited or deleted (with its category, such as Mosque or Home, and a random internal ID for the spot); that a prayer was marked in the tracker (which of the five prayers, and whether it was marked Jamat, Alone or Qada); that a tasbeeh goal was reached (which built-in dhikr, or simply "custom") or a custom tasbeeh was created (its goal number); that a backup, restore or CSV export was run (with the number of prayers and spots it contained); and that the rate-app button was tapped.</li>
+            <li><strong>General device information recorded by Firebase:</strong> such as device model, operating system version, app version, language and approximate country or region derived from your IP address.</li>
+        </ul>
+        <p>These statistics do <strong>not</strong> include your GPS coordinates, the names, cities or photos of your saved spots, the dates of your prayers, your fasting records, or any text you type (including custom dhikr text). Advertising ID collection is disabled in the app, and the data is not used for advertising and is not sold.</p>
+
+        <h3>g. Internet Connection Check</h3>
+        <p>While the map screen is open, the app periodically makes a small request to a Google connectivity-check address to detect whether you are offline, so it can show an offline notice. No personal data or location is included in that request; like any internet request, it reveals your IP address to the server.</p>
+
+        <h2>2. Backups and Exports</h2>
+        <p>You can create a backup file (<em>Settings &gt; Back Up All Data</em>) or export your spots as a CSV file. These files are created only when you ask, and you choose where they go through your device's share sheet. A backup contains your prayers, spots (including their coordinates), tasbeeh counts and settings (including your saved prayer-time location); a CSV export contains your spots' names, categories, cities, countries, coordinates and dates. Spot photos are not included in either. These files are not encrypted, so anyone who has the file can read it; store and share it carefully. You can restore a backup with <em>Restore from Backup</em>.</p>
+        <p>You can also share a summary image of your spot statistics. It is created on your device and goes only where you choose to send it.</p>
+
+        <h2>3. Data Storage, Retention and Deletion</h2>
+        <p>Your spots, photos, prayer history and settings live only on your device. You can remove them at any time by clearing the app's storage in your Android settings or by uninstalling the app. This permanently deletes them unless you made a backup; we cannot recover them for you. The app does not use Android's automatic cloud backup.</p>
+        <p>Usage statistics are held by Google Analytics under the app-instance identifier, not under your name or contact details, and are kept for the retention period set in Google Analytics. Clearing the app's storage or uninstalling the app resets that identifier, so later use is not connected to earlier use. Because we have no way to tell which identifier belongs to which person, we generally cannot look up or delete one individual's past statistics on request. If you have a question about this, contact us at the address below.</p>
+        <p>We recommend locking your device with a PIN or biometrics.</p>
+
+        <h2>4. Third-Party Services</h2>
+        <ul>
+            <li><strong>Google Maps</strong> (map display) and your device's <strong>geocoding service</strong> (place names).</li>
+            <li><strong>Google Analytics for Firebase</strong> (usage statistics, section 1f).</li>
+            <li>A <strong>Google connectivity check</strong> (offline detection on the map screen, section 1g).</li>
+        </ul>
+        <p>The app contains no advertising and does not share your data with advertisers or data brokers.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Sajda is not directed at children under 13, and we do not knowingly collect personal information from them. The app has no accounts and keeps your spots, photos and prayer records on your device; the only data that leaves the device is described in section 1.</p>
+
+        <h2>6. Security</h2>
+        <p>Your spots, photos and prayer records stay in the app's private storage on your device, protected by the Android app sandbox. Data sent to Google is transmitted over encrypted (HTTPS) connections. No method of electronic storage is perfectly secure, so please keep your device and any backup files safe.</p>
+
+        <h2>7. Changes to This Policy</h2>
+        <p>If we change how the app handles data, we will update this page and the "Last Updated" date above. Please review it from time to time.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>For questions about this policy or about Sajda, contact SM Technologies at:</p>
+        <p><strong>Email:</strong> smtechnologies.dev@gmail.com</p>
 
         <div class="footer">
-            <p>&copy; 2026 Sajda App. All rights reserved.</p>
+            <p>&copy; 2026 SM Technologies. All rights reserved.</p>
         </div>
     </div>
 </body>
